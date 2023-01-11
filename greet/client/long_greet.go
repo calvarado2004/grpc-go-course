@@ -25,7 +25,10 @@ func doLongGreet(c pb.GreetServiceClient) {
 
 	for _, req := range reqs {
 		log.Printf("Sending req %v\n", req)
-		stream.Send(req)
+		err := stream.Send(req)
+		if err != nil {
+			return
+		}
 		time.Sleep(1000 * time.Millisecond)
 	}
 
