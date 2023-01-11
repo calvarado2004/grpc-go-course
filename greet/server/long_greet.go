@@ -23,7 +23,7 @@ func (s *Server) LongGreet(stream pb.GreetService_LongGreetServer) error {
 		if err != nil {
 			log.Fatalf("Error while reading client stream: %v", err)
 		}
-		res += fmt.Sprintf("Hello %v", req.FirstName)
+		res += fmt.Sprintf("Hello %v! ", req.FirstName)
 
 	}
 }
