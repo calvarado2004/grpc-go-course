@@ -22,7 +22,7 @@ func doMax(c pb.CalculatorServiceClient) {
 
 	go func() {
 
-		numbers := []int32{1, 5, 3, 6, 2, 20}
+		numbers := []int32{1, 5, 15, 18, 3, 6, 2, 20, 4}
 
 		for _, number := range numbers {
 			log.Printf("Sending number: %d\n", number)
