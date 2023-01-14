@@ -2,6 +2,8 @@ package main
 
 import (
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
+
 	"log"
 	"net"
 
@@ -25,6 +27,7 @@ func main() {
 
 	server := grpc.NewServer()
 	pb.RegisterCalculatorServiceServer(server, &Server{})
+	reflection.Register(server)
 
 	if err = server.Serve(listen); err != nil {
 		log.Fatalf("Failed to serve gRPC server over %v", err)
