@@ -23,7 +23,9 @@ func main() {
 
 	id := createBlog(client)
 
-	readBlog(client, id)               // This should work fine
-	readBlog(client, "aNonExistingId") // This will fail
+	readBlog(client, id) // This should work fine
+	//readBlog(client, "aNonExistingId") // This will fail
+
+	updateBlog(client, id) // This should work fine
 
 }
