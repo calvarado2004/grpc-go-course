@@ -28,4 +28,6 @@ func main() {
 
 	updateBlog(client, id) // This should work fine
 
+	listBlog(client)
+
 }
