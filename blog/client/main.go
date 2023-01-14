@@ -30,4 +30,6 @@ func main() {
 
 	listBlog(client)
 
+	deleteBlog(client, id) // This should work fine
+
 }
