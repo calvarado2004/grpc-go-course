@@ -21,6 +21,9 @@ func main() {
 
 	client := pb.NewBlogServiceClient(conn)
 
-	createBlog(client)
-	
+	id := createBlog(client)
+
+	readBlog(client, id)               // This should work fine
+	readBlog(client, "aNonExistingId") // This will fail
+
 }
